@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",// 目标 ECMAScript 版本为 ESNext
+    "useDefineForClassFields": true,// 使用类字段的定义（编译为属性定义）
+    "module": "esnext",// 指定模块类型为 ESNext
+    "moduleResolution": "node",// 使用 Node.js 风格的模块解析
+    "strict": true,// 启用严格模式，进行更严格的类型检查
+    "noLib": false,// 不排除默认的库文件
+    "jsx": "preserve",// 保留 JSX 代码，但不进行转换
+    "sourceMap": true,// 生成源映射文件
+    "resolveJsonModule": true,// 允许导入 JSON 模块
+    "esModuleInterop": true,// 支持 CommonJS 默认导出和 ES6 导入/导出
+    "lib": ["esnext", "dom"], // 使用的库文件（ESNext 和 DOM）
+    "baseUrl": ".",// 基本路径
+    "allowJs": true,// 允许项目中导入编译 JavaScript 文件
+    "noImplicitAny": true,//允许any
+    "paths": {
+      "@/*": ["src/*"]// 路径映射，使 "@/*" 指向 "src/*"
+    },
+    "types": ["vite/client", "unplugin-icons/types/vue"], // 导入的类型声明文件
+    "skipLibCheck": false /* Skip type checking all .d.ts files. */,  // 跳过对所有 .d.ts 文件的类型检查
+    "experimentalDecorators": true,//开启装饰器
+    "strictFunctionTypes": false,
+    "allowSyntheticDefaultImports": true /* 允许默认导入 */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */// 强制文件名的大小写一致性
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "src/types/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js"]
+  // "references": [{ "path": "./tsconfig.node.json" }]
+}
